@@ -239,6 +239,8 @@ function search(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${myCity.value}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showWeather);
+  celsius.classList.add("active");
+  fahrengate.classList.remove("active");
 }
 let form = document.querySelector("#serch-cities");
 form.addEventListener("submit", search);
