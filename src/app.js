@@ -252,6 +252,8 @@ function showPosition(position) {
   let longitude = position.coords.longitude;
   let apiKey = "4a8e2f6facdabec0ff87798adbd38ad7";
   let apiNew = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  celsius.classList.add("active");
+  fahrengate.classList.remove("active");
   axios.get(apiNew).then(showWeather);
 }
 
